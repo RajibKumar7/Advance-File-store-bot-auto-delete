@@ -1,0 +1,61 @@
+{
+    "name": "Ai File Store Bot",
+    "description": "A Telegram Ai Files Store Bot to protect your Files in Pyrogram by @the_ai_botz",
+    "keywords": [
+        "telegram",
+        "files",
+        "store",
+        "bot"
+    ],
+    "repository": "https://github.com/tgaibotz/filestore-urlsh",
+    "website": "https://t.me/the_ai_botz",
+    "success_url": "https://t.me/AI_BOTZ_SUPPORT",
+    "logo": "https://telegra.ph/Ai-png-12-11",
+    "env": {
+        "API_ID": {
+            "description": "Get this value from my.telegram.org"
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org"
+        },
+        "BOT_TOKEN": {
+            "description": "Get this from @BotFather"
+        },
+        "BOT_USERNAME": {
+            "description": "Your Bot Username which you sent to @BotFather (Without [@])"
+        },
+        "DB_CHANNEL": {
+            "description": "The Channel ID which will be used as Database. Example: -100123456789"
+        },
+        "SHORTLINK_URL": {
+            "description": "Your URL Shortner Domain Name"
+        },
+        "SHORTLINK_API": {
+            "description": "Your Url Shortner Api Token"
+        },
+        "BOT_OWNER": {
+            "description": "Bot Owner UserID"
+        },
+        "DATABASE_URL": {
+            "description": "MongoDB Database URI for Saving UserID for Broadcast."
+        },
+        "UPDATES_CHANNEL": {
+            "description": "ID of a Channel which you want to do Force Sub to use the bot. Example: -100123456789",
+            "required": false
+        },
+        "LOG_CHANNEL": {
+            "description": "Logs Channel ID for some Tracking XD. Example: -100123456789"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
